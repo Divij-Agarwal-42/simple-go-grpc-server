@@ -1,7 +1,7 @@
 # Simple gRPC server (Go server + Python client)
 
 ## Prerequisites
-- Go (1.21+ recommended)
+- Go (1.21+ recommended): [Installation guide](https://go.dev/doc/install)
 - Python 3.10+ and `pip`
 
 ## 1. Install Python dependencies
