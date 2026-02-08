@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package tensor.v1;
+
+option go_package = "example/hello/pb;tensorpb";
+
+service TensorService {
+  rpc Health(HealthRequest) returns (HealthResponse);
+  rpc CheckTensor(CheckTensorRequest) returns (Tensor);
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+  string status = 1;
+}
+
+message Tensor {
+  repeated int64 shape = 1;
+  repeated double values = 2;
+}
+
+message CheckTensorRequest {
+  Tensor tensor = 1;
+}
